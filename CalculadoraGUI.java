@@ -83,6 +83,8 @@ public class CalculadoraGUI extends JFrame implements ActionListener {
                     case '/':
                         if (num2 == 0) {
                             campoTexto.setText("Divisão por zero");
+
+                            new javax.swing.Timer(2000, evt -> campoTexto.setText("")).start();
                             return;
                         }
                         resultado = num1 / num2;
